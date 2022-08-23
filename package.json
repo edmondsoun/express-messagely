@@ -2,21 +2,22 @@
   "name": "messagely",
   "version": "1.1.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "jest -i"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "*",
+    "bcrypt": "^5.0.1",
     "body-parser": "*",
     "cors": "*",
     "dotenv": "*",
     "express": "^5.0.0-alpha.8",
     "express-cors": "*",
-    "jsonwebtoken": "*",
+    "jsonwebtoken": "^8.5.1",
     "pg": "*",
-    "supertest": "*"
+    "supertest": "*",
+    "twilio": "^3.80.1"
   }
 }

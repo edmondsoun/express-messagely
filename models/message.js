@@ -4,6 +4,7 @@
 
 const { NotFoundError } = require("../expressError");
 const db = require("../db");
+const SEND_TWILIO_MESSAGE = require("../send_sms")
 
 /** Message on the site. */
 
@@ -24,8 +25,10 @@ class Message {
              RETURNING id, from_username, to_username, body, sent_at`,
         [from_username, to_username, body]);
 
+    await SEND_TWILIO_MESSAGE;
+
     return result.rows[0];
-  }
+  } 
 
   /** Update read_at for message
    *
